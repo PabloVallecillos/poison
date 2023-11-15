@@ -1,0 +1,39 @@
+[class*='heading'] {
+	font-family: $primary-font;
+	font-size: 27px;
+	font-style: italic;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 7.56px;
+	text-transform: uppercase;
+	background-image: repeating-linear-gradient(45deg, transparent 5px, transparent 12px, #FF8882 14px, #FF8882 12px);
+	background-size: cover;
+	width: 326.171px;
+	height: 98.28px;
+	padding: 15px 0 0 20px;
+	position: relative;
+
+	@include media('max-width', mobile-breakpoint) {
+		padding: 15px 0 0 var(--container-padding);
+		width: 75%;
+	}
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: linear-gradient(to right, transparent, transparent, $white);
+
+		@include media('max-width', mobile-breakpoint) {
+			width: 100px;
+			right: 0;
+			left: inherit;
+			background: linear-gradient(to right, transparent, $white);
+		}
+
+		width: 326.171px;
+		height: 98.28px;
+		top: 0;
+		left: 0;
+	}
+}

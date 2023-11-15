@@ -1,0 +1,209 @@
+.section-3 {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background: linear-gradient(180deg, $secondary 0%, #FFC2B4 100%);
+
+	&__heading {
+		margin-left: auto;
+		margin-right: -35px;
+		background-image: repeating-linear-gradient(45deg, transparent 5px, transparent 12px, $white 14px, $white 12px);
+		text-align: right;
+		color: $white;
+		padding: 15px 15px 0 0;
+
+		@include media('max-width', tablet-breakpoint) {
+			margin-right: calc(var(--container-padding) * -1);
+			padding: 15px 0 0;
+		}
+
+		&::before {
+			background: linear-gradient(to left, transparent, $secondary);
+			opacity: .7;
+			left: 0;
+			width: 220px;
+
+			@include media('max-width', tablet-breakpoint) {
+				width: inherit;
+			}
+		}
+	}
+
+	&__h2 {
+		text-align: right;
+		font-family: $primary-font;
+		font-size: 105px;
+		transform: translateY(-40px);
+		margin-bottom: -40px;
+
+		@include media('max-width', tablet-breakpoint) {
+			font-size: 57.18px;
+			transform: translateY(-21px);
+			margin-bottom: -21px;
+		}
+
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		color: $white;
+
+		&:last-of-type {
+			margin-bottom: -20px;
+			color: transparent;
+			-webkit-text-stroke: 1px $white;
+			transform: translateY(-45px);
+
+			@include media('max-width', tablet-breakpoint) {
+				transform: translateY(-20px);
+			}
+		}
+	}
+
+	&__flavours {
+		column-count: 4;
+		column-gap: 30px;
+		animation: expand .5s ease-in-out;
+		scrollbar-width: thin;
+		scrollbar-color: transparent transparent;
+
+		@include media('max-width', tablet-breakpoint) {
+			margin-top: 50px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+			height: 2px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: transparent;
+		}
+
+		&::-moz-scrollbar {
+			width: 8px;
+			border-radius: 20px;
+		}
+
+		&::-moz-scrollbar-thumb {
+			background-color: transparent;
+		}
+
+		&:hover {
+			scrollbar-color: $primary $primary;
+		}
+
+		&:hover::-webkit-scrollbar-thumb {
+			background-color: $primary;
+		}
+
+		&:hover::-moz-scrollbar-thumb {
+			background-color: $primary;
+		}
+
+		@include media('max-width', tablet-breakpoint) {
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+		}
+
+		&__article {
+			@include media('max-width', tablet-breakpoint) {
+				flex: 1 0 80%;
+			}
+
+			margin-bottom: 20px;
+			break-inside: avoid;
+			background-color: $white;
+			padding: 14px 12px;
+			border-radius: 10px;
+			display: flex;
+			gap: 14px;
+			flex-wrap: wrap;
+			height: max-content;
+
+			&__h5 {
+				color: $primary;
+				font-family: $primary-font;
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				letter-spacing: 4.095px;
+				text-transform: uppercase;
+				align-self: center;
+			}
+
+			&__p, p {
+				color: $primary;
+				font-family: $secondary-font;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				flex-basis: 100%;
+			}
+		}
+
+		.insert-article-animation {
+			animation: append-animate .5s ease-in-out;
+		}
+	}
+
+	&__flavours__article__a, &__btn {
+		border-radius: 55px;
+		background: $secondary;
+		color: white;
+		text-align: center;
+		font-family: $secondary-font;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		padding: 4px 17px;
+		text-transform: capitalize;
+		margin-left: auto;
+		flex-grow: 0;
+		max-height: 30px;
+
+		svg {
+			vertical-align: middle;
+		}
+	}
+
+	&__load-more-flavours-container {
+		display: grid;
+		place-content: center;
+	}
+
+	&__btn {
+		padding: 8px 21px;
+		max-height: max-content;
+		margin-top: 20px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+}
+
+@keyframes expand {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

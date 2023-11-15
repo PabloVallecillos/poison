@@ -1,0 +1,32 @@
+{
+	"name": "poison/poison",
+	"description": "Advanced knowledge test",
+	"type": "wordpress-theme",
+	"license": "ISC",
+	"autoload": {
+		"psr-4": {
+			"Inc\\": "inc/"
+		}
+	},
+	"authors": [
+		{
+			"name": "PabloVallecillos",
+			"email": "vallecillospablo@gmail.com"
+		}
+	],
+	"minimum-stability": "stable",
+	"support": {
+		"issues": "https://github.com/PabloVallecillos/poison",
+		"docs": "https://github.com/PabloVallecillos/poison"
+	},
+	"keywords": [
+		"wordpress",
+		"theme"
+	],
+	"require": {
+		"php": "^8.2"
+	},
+	"require-dev": {
+		"codelytv/coding-style": "^1.2"
+	}
+}

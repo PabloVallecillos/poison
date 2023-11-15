@@ -1,0 +1,59 @@
+$dark-blue-grey: #194350;
+$salmon-pink: #FF8882;
+$pale-rose: #FFC2B4;
+$cool-grey: #9DBEB9;
+$silver: #FFFFFF80;
+$white: #FFF;
+
+$primary: $dark-blue-grey;
+$secondary: $salmon-pink;
+
+$primary-font: 'Josefin Sans', system-ui, sans-serif;
+$secondary-font: 'Lato', sans-serif;
+
+$laptop-l-breakpoint: 1440px;
+$laptop-breakpoint: 1024px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 425px;
+
+$breakpoints: (
+	'laptop-l-breakpoint': $laptop-l-breakpoint,
+	'laptop-breakpoint': $laptop-breakpoint,
+	'tablet-breakpoint': $tablet-breakpoint,
+	'mobile-breakpoint': $mobile-breakpoint,
+);
+
+$container-padding: 20vw;
+
+$container-padding-breakpoints: (
+	'laptop-l-breakpoint': 165px,
+	'laptop-breakpoint': 100px,
+	'tablet-breakpoint': 20px,
+	'mobile-breakpoint': 10px,
+);
+
+$button-border-radius: 2px;
+
+$root-vars: (
+	'dark-blue-grey': $dark-blue-grey,
+	'salmon-pink': $salmon-pink,
+	'pale-rose': $pale-rose,
+	'cool-grey': $cool-grey,
+	'silver': $silver,
+	'white': $white,
+
+	'primary': $primary,
+	'secondary': $secondary,
+
+	'primary-font': $primary-font,
+	'secondary-font': $secondary-font,
+
+	'container-padding': $container-padding,
+	'button-border-radius': $button-border-radius,
+);
+
+:root {
+	@each $color, $value in $root-vars {
+		--#{$color}: #{$value};
+	}
+}

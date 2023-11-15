@@ -1,0 +1,34 @@
+{
+	"name": "poison",
+	"version": "1.0.0",
+	"description": "Advanced knowledge test",
+	"main": "index.js",
+	"scripts": {
+		"sass-build": "sass scss:css",
+		"sass-watch": "sass scss:css --watch",
+		"js-lint": "eslint --fix --ext .js ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PabloVallecillos/poison.git"
+	},
+	"keywords": [
+		"wordpress",
+		"theme"
+	],
+	"author": "PabloVallecillos",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PabloVallecillos/poison/issues"
+	},
+	"devDependencies": {
+		"eslint": "^8.53.0",
+		"eslint-config-codely": "^3.1.1",
+		"postcss": "^8.4.31",
+		"postcss-scss": "^4.0.9",
+		"sass": "^1.69.5",
+		"stylelint": "^15.11.0",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-scss": "^5.3.1"
+	}
+}

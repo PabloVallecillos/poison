@@ -1,0 +1,39 @@
+.button {
+	width: 256px;
+	height: 62px;
+	border-radius: $button-border-radius;
+	font-weight: bold;
+	font-family: $primary-font;
+	font-size: 21px;
+	letter-spacing: 4.095px;
+	text-transform: uppercase;
+	color: $primary;
+	background-color: $silver;
+	position: relative;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: -15px;
+		background-color: $silver;
+		width: 28px;
+		height: 7px;
+		border-radius: $button-border-radius;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 10px;
+		right: -20px;
+		background-color: $silver;
+		width: 42px;
+		height: 7px;
+		border-radius: $button-border-radius;
+	}
+}

@@ -1,0 +1,23 @@
+[class*='section-'] {
+	[class*='__h1'], [class*='__h2'] {
+		font-family: $primary-font;
+
+		@include media('max-width', mobile-breakpoint) {
+			font-size: 53.51px;
+		}
+
+		font-style: italic;
+		font-weight: bold;
+		line-height: normal;
+	}
+
+	[class*='__h2'] {
+		&:last-of-type {
+			color: transparent;
+		}
+	}
+
+	[class*='__p'] {
+		font-family: $secondary-font;
+	}
+}

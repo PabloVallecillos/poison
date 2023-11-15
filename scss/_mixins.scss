@@ -1,0 +1,5 @@
+@mixin media($width, $breakpoint) {
+	@media (#{$width}: map-get($breakpoints, $breakpoint)) { /* stylelint-disable-line */
+		@content;
+	}
+}
